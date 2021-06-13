@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import SwiftSoup
 
 struct ContentView: View {
+    @ObservedObject var SeriesVModel = SeriesViewModel()
+    @ObservedObject var SeriesGroupVModel = SeriesGroupViewModel()
+    @ObservedObject var SCPVModel = SCPViewModel()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack(spacing: 20) {
+                SeriesListView(SeriesVModel: SeriesVModel, SeriesGroupVModel: SeriesGroupVModel, SCPVModel: SCPVModel)
+            }
+        }
     }
 }
 

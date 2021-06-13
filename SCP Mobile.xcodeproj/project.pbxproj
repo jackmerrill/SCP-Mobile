@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		456C0EF526748834000FD073 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456C0EF426748834000FD073 /* Preview Assets.xcassets */; };
 		456C0EFF26748835000FD073 /* SCP_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C0EFE26748835000FD073 /* SCP_MobileTests.swift */; };
 		456C0F0926748835000FD073 /* SCP_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C0F0826748835000FD073 /* SCP_MobileUITests.swift */; };
+		456C0F1726748A67000FD073 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 456C0F1626748A67000FD073 /* SwiftSoup */; };
+		456C0F1A26748C44000FD073 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 456C0F1926748C44000FD073 /* Alamofire */; };
+		45DC0B3B267540FC00E500C8 /* SeriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC0B3A267540FC00E500C8 /* SeriesListView.swift */; };
+		45DC0B3F267552D400E500C8 /* SeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC0B3E267552D400E500C8 /* SeriesView.swift */; };
+		45DC0B41267580B500E500C8 /* SCPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC0B40267580B500E500C8 /* SCPView.swift */; };
+		45DC0B442675B66000E500C8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 45DC0B432675B66000E500C8 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,10 @@
 		456C0EFE26748835000FD073 /* SCP_MobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCP_MobileTests.swift; sourceTree = "<group>"; };
 		456C0F0426748835000FD073 /* SCP MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SCP MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		456C0F0826748835000FD073 /* SCP_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCP_MobileUITests.swift; sourceTree = "<group>"; };
+		459E7D1E2674941800FB082A /* SCP-Mobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SCP-Mobile-Info.plist"; sourceTree = SOURCE_ROOT; };
+		45DC0B3A267540FC00E500C8 /* SeriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListView.swift; sourceTree = "<group>"; };
+		45DC0B3E267552D400E500C8 /* SeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
+		45DC0B40267580B500E500C8 /* SCPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DC0B442675B66000E500C8 /* SwiftyJSON in Frameworks */,
+				456C0F1726748A67000FD073 /* SwiftSoup in Frameworks */,
+				456C0F1A26748C44000FD073 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +105,8 @@
 		456C0EEC26748832000FD073 /* SCP Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				45DC0B39267540DB00E500C8 /* Components */,
+				459E7D1E2674941800FB082A /* SCP-Mobile-Info.plist */,
 				456C0EED26748832000FD073 /* SCP_MobileApp.swift */,
 				456C0EEF26748832000FD073 /* ContentView.swift */,
 				456C0EF126748834000FD073 /* Assets.xcassets */,
@@ -124,6 +139,16 @@
 			path = "SCP MobileUITests";
 			sourceTree = "<group>";
 		};
+		45DC0B39267540DB00E500C8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				45DC0B3A267540FC00E500C8 /* SeriesListView.swift */,
+				45DC0B3E267552D400E500C8 /* SeriesView.swift */,
+				45DC0B40267580B500E500C8 /* SCPView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +165,11 @@
 			dependencies = (
 			);
 			name = "SCP Mobile";
+			packageProductDependencies = (
+				456C0F1626748A67000FD073 /* SwiftSoup */,
+				456C0F1926748C44000FD073 /* Alamofire */,
+				45DC0B432675B66000E500C8 /* SwiftyJSON */,
+			);
 			productName = "SCP Mobile";
 			productReference = 456C0EEA26748832000FD073 /* SCP Mobile.app */;
 			productType = "com.apple.product-type.application";
@@ -204,7 +234,7 @@
 				};
 			};
 			buildConfigurationList = 456C0EE526748832000FD073 /* Build configuration list for PBXProject "SCP Mobile" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -212,6 +242,11 @@
 				Base,
 			);
 			mainGroup = 456C0EE126748832000FD073;
+			packageReferences = (
+				456C0F1526748A67000FD073 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				456C0F1826748C44000FD073 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				45DC0B422675B66000E500C8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 456C0EEB26748832000FD073 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,6 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				456C0EF026748832000FD073 /* ContentView.swift in Sources */,
+				45DC0B3F267552D400E500C8 /* SeriesView.swift in Sources */,
+				45DC0B3B267540FC00E500C8 /* SeriesListView.swift in Sources */,
+				45DC0B41267580B500E500C8 /* SCPView.swift in Sources */,
 				456C0EEE26748832000FD073 /* SCP_MobileApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -397,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -418,6 +456,10 @@
 				DEVELOPMENT_TEAM = PVQR86M84Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SCP-Mobile-Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = "SCP Mobile";
+				INFOPLIST_KEY_CFBundleName = "SCP Mobile";
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,6 +490,10 @@
 				DEVELOPMENT_TEAM = PVQR86M84Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SCP-Mobile-Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = "SCP Mobile";
+				INFOPLIST_KEY_CFBundleName = "SCP Mobile";
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -603,6 +649,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		456C0F1526748A67000FD073 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		456C0F1826748C44000FD073 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		45DC0B422675B66000E500C8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		456C0F1626748A67000FD073 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 456C0F1526748A67000FD073 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		456C0F1926748C44000FD073 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 456C0F1826748C44000FD073 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		45DC0B432675B66000E500C8 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45DC0B422675B66000E500C8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 456C0EE226748832000FD073 /* Project object */;
 }
